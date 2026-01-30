@@ -121,6 +121,52 @@
     <p><strong>Date:</strong> January 30, 2026</p>
     <p><strong>Purpose:</strong> Testing the dynamic_scene pipeline with GPT-4o vision model for image-to-3D scene generation.</p>
 
+    <div style="display: inline-block; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 8px 20px; border-radius: 25px; font-weight: bold; margin: 10px 0;">
+        🎬 Pipeline Mode: dynamic_scene
+    </div>
+
+    <div class="test-section">
+        <h2>📋 Pipeline Modes</h2>
+        <p>VIGA supports multiple pipeline modes. This test used <strong>dynamic_scene</strong>:</p>
+        
+        <table>
+            <tr>
+                <th>Mode</th>
+                <th>Purpose</th>
+                <th>Animation?</th>
+                <th>Use Case</th>
+            </tr>
+            <tr style="background: #fde8e8;">
+                <td><strong>🎬 dynamic_scene</strong></td>
+                <td>Animated 3D scene from image + text</td>
+                <td>✅ Yes</td>
+                <td>"Bottle tips over and rolls"</td>
+            </tr>
+            <tr>
+                <td>🖼️ static_scene</td>
+                <td>Still 3D recreation of an image</td>
+                <td>❌ No</td>
+                <td>Recreate a room from a photo</td>
+            </tr>
+            <tr>
+                <td>🎮 BlenderGym</td>
+                <td>Single-step scene editing</td>
+                <td>❌ No</td>
+                <td>"Change the lamp color to red"</td>
+            </tr>
+            <tr>
+                <td>🏆 BlenderBench</td>
+                <td>Multi-step complex editing</td>
+                <td>❌ No</td>
+                <td>Transform scene A → scene B</td>
+            </tr>
+        </table>
+        
+        <div class="info-box">
+            <strong>Why dynamic_scene?</strong> Both tests required animation — objects moving, tipping, rolling, or smashing. The <code>dynamic_scene</code> pipeline generates keyframe animations in Blender.
+        </div>
+    </div>
+
     <div class="test-section">
         <h2>🔄 What are "Rounds"?</h2>
         <p>VIGA uses a <strong>dual-agent iterative system</strong>. Each <strong>round</strong> is one complete cycle:</p>

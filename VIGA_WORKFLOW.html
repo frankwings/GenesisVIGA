@@ -948,16 +948,23 @@
                 <td>Every round of Generator Agent (agents/generator.py)</td>
             </tr>
             <tr>
-                <td style="color: #e91e63;"><strong>Meshy API</strong></td>
-                <td>Text-to-3D: Creates detailed 3D models from descriptions</td>
-                <td>When agent calls <code>get_better_object</code> tool (tools/assets/meshy.py)</td>
+                <td style="color: #9b59b6;"><strong>SAM / SAM3D</strong></td>
+                <td>Auto-segments ALL objects → Reconstructs 3D meshes → Creates initial scene</td>
+                <td><strong>Stage 2 (Initialization):</strong> <code>--prompt-setting init</code><br>Runs BEFORE agent loop starts</td>
             </tr>
             <tr>
-                <td style="color: #9b59b6;"><strong>SAM / SAM3D</strong></td>
-                <td>Auto-segments objects → Reconstructs 3D meshes from masks</td>
-                <td>Scene initialization with <code>--prompt-setting init</code></td>
+                <td style="color: #e91e63;"><strong>Meshy API</strong></td>
+                <td>Text/Image-to-3D: Creates detailed 3D models on-demand</td>
+                <td><strong>Stage 3+ (During Loop):</strong> When agent calls <code>get_better_object</code><br>Upgrades individual objects during iterations</td>
             </tr>
         </table>
+        
+        <div class="info-box">
+            <strong>💡 SAM3D vs Meshy - Different Roles:</strong><br>
+            • <strong>SAM3D</strong> = Bulk scene initialization (reconstructs everything from image)<br>
+            • <strong>Meshy</strong> = On-demand quality upgrades (generates specific objects during refinement)<br><br>
+            They can be used together: SAM3D sets up the scene, Meshy improves individual assets.
+        </div>
     </div>
 
     <!-- Pipeline Workflow -->
@@ -987,27 +994,36 @@
 
         <div class="arrow">⬇️</div>
 
-        <!-- Stage 2: Optional SAM -->
+        <!-- Stage 2: SAM3D Initialization -->
         <div class="stage" style="border-left: 4px solid #9b59b6;">
             <div class="stage-header">
                 <div class="stage-number" style="background: #9b59b6;">2</div>
-                <div class="stage-title">🟣 (Optional) SAM Scene Initialization</div>
+                <div class="stage-title">🟣 SAM3D Scene Initialization (Recommended)</div>
             </div>
             <div class="stage-content">
-                <p><em>If enabled:</em> SAM auto-detects objects → SAM3D reconstructs 3D meshes → Import into Blender</p>
+                <p><strong>Enable with:</strong> <code>--prompt-setting init --generator-tools tools/sam3d/init.py,...</code></p>
                 <div class="component-grid">
                     <div class="component">
                         <div class="component-icon">🔍</div>
                         <div class="component-name">SAM Segmentation</div>
+                        <div style="font-size:0.8em;color:#64748b">Auto-detect all objects</div>
                     </div>
                     <div class="component">
                         <div class="component-icon">📦</div>
                         <div class="component-name">SAM3D → GLB</div>
+                        <div style="font-size:0.8em;color:#64748b">Image → 3D mesh</div>
                     </div>
                     <div class="component">
                         <div class="component-icon">📥</div>
                         <div class="component-name">Import to Blender</div>
+                        <div style="font-size:0.8em;color:#64748b">Initial scene ready</div>
                     </div>
+                </div>
+                <div class="info-box" style="margin-top: 15px;">
+                    <strong>⚠️ Without this step:</strong> Agent starts from empty scene and uses only primitives (cubes, cylinders). 
+                    SAM3D gives a much better starting point by reconstructing actual objects from the image.
+                    <br><br>
+                    <strong>Requirements:</strong> Linux + 32GB VRAM GPU, or use <strong>Meshy API</strong> as alternative.
                 </div>
             </div>
         </div>

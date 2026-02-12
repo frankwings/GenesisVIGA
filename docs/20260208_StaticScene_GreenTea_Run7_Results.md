@@ -99,42 +99,42 @@ All 5 assets matched via local fuzzy matching (no Meshy API needed):
 ## 5. Render Results
 
 ### Round 1 — Initial Layout
-![Round 1](../output/static_scene/20260208_164519/greentea/renders/1/Camera.png)
+![Round 1](test_results_images/static_scene/20260208_164519/renders/round_1_Camera.png)
 
 **Observations:** Large white ground plane dominates. ITO EN bottle (yellow-green) visible in upper right. Table bracket and keyboard visible but small. Camera too far, FOV too wide.
 
 ### Round 2 — Closer Camera
-![Round 2](../output/static_scene/20260208_164519/greentea/renders/2/Camera.png)
+![Round 2](test_results_images/static_scene/20260208_164519/renders/round_2_Camera.png)
 
 **Observations:** Camera moved much closer. Bottle and keyboard visible but scene is dark — most objects in upper right corner only. Ground plane still dominates lower left.
 
 ### Round 3 — Table Focus
-![Round 3](../output/static_scene/20260208_164519/greentea/renders/3/Camera.png)
+![Round 3](test_results_images/static_scene/20260208_164519/renders/round_3_Camera.png)
 
 **Observations:** ITO EN bottle clearly visible with green label. Table bracket used as furniture. Objects clustered on one side.
 
 ### Round 4 — Top-Down All Objects
-![Round 4](../output/static_scene/20260208_164519/greentea/renders/4/Camera.png)
+![Round 4](test_results_images/static_scene/20260208_164519/renders/round_4_Camera.png)
 
 **Observations:** Best "all objects visible" view. From above: ITO EN bottle (center-left, green), keyboard panel (center-right, gray), envelope (top-right, white), headphones ring (bottom-center, teal). All 5 SAM3D reconstructions clearly shown.
 
 ### Round 5 — Scattered Layout
-![Round 5](../output/static_scene/20260208_164519/greentea/renders/5/Camera.png)
+![Round 5](test_results_images/static_scene/20260208_164519/renders/round_5_Camera.png)
 
 **Observations:** Objects spread apart. Bottle and keyboard visible with envelope in background. Some objects cut off.
 
 ### Round 6 — All Objects Arranged
-![Round 6](../output/static_scene/20260208_164519/greentea/renders/6/Camera.png)
+![Round 6](test_results_images/static_scene/20260208_164519/renders/round_6_Camera.png)
 
 **Observations:** Clean top-down view. All 5 objects visible and properly spaced. Keyboard (gray panel), bottle (green), envelope (white), headphones (teal ring) clearly distinguishable.
 
 ### Round 8 — Table as Furniture
-![Round 8](../output/static_scene/20260208_164519/greentea/renders/8/Camera.png)
+![Round 8](test_results_images/static_scene/20260208_164519/renders/round_8_Camera.png)
 
 **Observations:** Table bracket now scaled large (1.6) and used as desk. Bottle and envelope placed on top. Headphones ring floating to the right. Scene has depth and perspective.
 
 ### Round 9 — Final Scene
-![Round 9](../output/static_scene/20260208_164519/greentea/renders/9/Camera.png)
+![Round 9](test_results_images/static_scene/20260208_164519/renders/round_9_Camera.png)
 
 **Observations:** Best composition. Table scaled as desk with objects arranged on top. ITO EN bottle prominently placed with envelope and keyboard nearby. Headphones to the right. 32mm close-up lens, 3-point lighting with blue keyboard backlight spill. Dark world background provides contrast.
 
@@ -146,10 +146,10 @@ Rotation renders (36 frames each, EEVEE, 512x512) for key rounds:
 
 | Round | GIF |
 |-------|-----|
-| Round 1 | ![Round 1 Rotation](../output/static_scene/20260208_164519/greentea/rotation_gif/round_1.gif) |
-| Round 3 | ![Round 3 Rotation](../output/static_scene/20260208_164519/greentea/rotation_gif/round_3.gif) |
-| Round 6 | ![Round 6 Rotation](../output/static_scene/20260208_164519/greentea/rotation_gif/round_6.gif) |
-| Round 9 (Final) | ![Round 9 Rotation](../output/static_scene/20260208_164519/greentea/rotation_gif/round_9.gif) |
+| Round 1 | ![Round 1 Rotation](test_results_images/static_scene/20260208_164519/rotation_gif/round_1.gif) |
+| Round 3 | ![Round 3 Rotation](test_results_images/static_scene/20260208_164519/rotation_gif/round_3.gif) |
+| Round 6 | ![Round 6 Rotation](test_results_images/static_scene/20260208_164519/rotation_gif/round_6.gif) |
+| Round 9 (Final) | ![Round 9 Rotation](test_results_images/static_scene/20260208_164519/rotation_gif/round_9.gif) |
 
 ---
 

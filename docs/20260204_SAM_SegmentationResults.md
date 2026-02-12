@@ -14,7 +14,7 @@
 
 ## Original Image
 
-![Original Green Tea Scene](../data/static_scene/greentea/target.png)
+![Original Green Tea Scene](test_results_images/greentea/target.png)
 
 *Source: data/static_scene/greentea/target.png (145KB)*
 
@@ -30,31 +30,31 @@
 
 ### Green Tea Bottle (359KB)
 
-![Green Tea Bottle](../output/test/greentea/sam_init/green_tea_bottle.png)
+![Green Tea Bottle](test_results_images/sam_init/green_tea_bottle.png)
 
 Primary green tea bottle, largest object in scene
 
 ### Ito En Bottle (298KB)
 
-![Ito En Bottle](../output/test/greentea/sam_init/ito_en_bottle.png)
+![Ito En Bottle](test_results_images/sam_init/ito_en_bottle.png)
 
 Secondary bottle, branded Ito En product
 
 ### Alienware Keyboard (144KB)
 
-![Alienware Keyboard](../output/test/greentea/sam_init/alienware_keyboard.png)
+![Alienware Keyboard](test_results_images/sam_init/alienware_keyboard.png)
 
 Gaming keyboard with distinctive design
 
 ### Headphones (27KB)
 
-![Headphones](../output/test/greentea/sam_init/headphones.png)
+![Headphones](test_results_images/sam_init/headphones.png)
 
 Audio headphones, smaller object
 
 ### Envelope (25KB)
 
-![Envelope](../output/test/greentea/sam_init/envelope.png)
+![Envelope](test_results_images/sam_init/envelope.png)
 
 Paper envelope, minimal object
 

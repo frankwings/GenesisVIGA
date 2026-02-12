@@ -7,7 +7,7 @@
 
 ## Input Image
 
-![Input Image](../output/test_sam/ito_en_green_tea_bottle.png)
+![Input Image](test_results_images/test_sam/ito_en_green_tea_bottle.png)
 
 *Original Input (2D Image + Mask)*
 

@@ -41,32 +41,32 @@ Identical to Run 7 — all 5 assets matched locally:
 ## 3. Render Results
 
 ### Round 2 — Initial Layout (All Objects Visible)
-![Round 2](../output/static_scene/20260208_204903/greentea/renders/2/Camera.png)
+![Round 2](test_results_images/static_scene/20260208_204903/renders/round_2_Camera.png)
 
 **Observations:** Best early render. All 5 objects clearly visible on white ground plane with dark background. ITO EN bottle (green, tilted), table bracket (behind), keyboard panel (standing), envelope (white rectangle), headphones (teal ring, foreground). Objects arranged as a loose desktop still life.
 
 ### Round 4 — Overhead Angle
-![Round 4](../output/static_scene/20260208_204903/greentea/renders/4/Camera.png)
+![Round 4](test_results_images/static_scene/20260208_204903/renders/round_4_Camera.png)
 
 **Observations:** Overhead perspective. Keyboard panel floating above ground plane. ITO EN bottle and headphones ring visible at bottom. Objects scattered — some cut off at frame edges.
 
 ### Round 5 — Top-Down Close
-![Round 5](../output/static_scene/20260208_204903/greentea/renders/5/Camera.png)
+![Round 5](test_results_images/static_scene/20260208_204903/renders/round_5_Camera.png)
 
 **Observations:** Similar to Round 4 but closer. Envelope (top-right), bottle (center), keyboard (small, top-center). Large white ground plane.
 
 ### Round 6 — Lost Objects
-![Round 6](../output/static_scene/20260208_204903/greentea/renders/6/Camera.png)
+![Round 6](test_results_images/static_scene/20260208_204903/renders/round_6_Camera.png)
 
 **Observations:** Regression — camera moved to extreme angle. Only ground plane edge and a tiny white object visible. Most objects lost from frame. The Verifier failed to catch this.
 
 ### Round 8 — Recovery
-![Round 8](../output/static_scene/20260208_204903/greentea/renders/8/Camera.png)
+![Round 8](test_results_images/static_scene/20260208_204903/renders/round_8_Camera.png)
 
 **Observations:** Partial recovery. Table bracket visible (top-left corner), ITO EN bottle (left edge), envelope (top-center), headphones ring (bottom-center). Objects spread along ground plane edges. Perspective view.
 
 ### Round 9 — Final Scene
-![Round 9](../output/static_scene/20260208_204903/greentea/renders/9/Camera.png)
+![Round 9](test_results_images/static_scene/20260208_204903/renders/round_9_Camera.png)
 
 **Observations:** Final composition. Objects arranged on ground plane with 50mm camera lens. ITO EN bottle (left, tilted), table bracket (top-left, partially visible), envelope (top-center), headphones ring (bottom-center). More scattered than Run 7's final scene. The 50mm lens provides tighter framing but objects are at the periphery.
 
@@ -76,9 +76,9 @@ Identical to Run 7 — all 5 assets matched locally:
 
 | Round | GIF |
 |-------|-----|
-| Round 2 | ![Round 2 Rotation](../output/static_scene/20260208_204903/greentea/rotation_gif/round_2.gif) |
-| Round 5 | ![Round 5 Rotation](../output/static_scene/20260208_204903/greentea/rotation_gif/round_5.gif) |
-| Round 9 (Final) | ![Round 9 Rotation](../output/static_scene/20260208_204903/greentea/rotation_gif/round_9.gif) |
+| Round 2 | ![Round 2 Rotation](test_results_images/static_scene/20260208_204903/rotation_gif/round_2.gif) |
+| Round 5 | ![Round 5 Rotation](test_results_images/static_scene/20260208_204903/rotation_gif/round_5.gif) |
+| Round 9 (Final) | ![Round 9 Rotation](test_results_images/static_scene/20260208_204903/rotation_gif/round_9.gif) |
 
 ---
 

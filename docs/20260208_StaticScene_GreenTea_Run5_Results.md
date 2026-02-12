@@ -100,43 +100,43 @@ These scripts import GLB assets with absolute paths. Camera/scale issues cause o
 
 | Round 3 | Round 4 |
 |---------|---------|
-| ![Round 3](../output/static_scene/20260208_050118/greentea/renders/3/Camera.png) | ![Round 4](../output/static_scene/20260208_050118/greentea/renders/4/Camera.png) |
+| ![Round 3](test_results_images/static_scene/20260208_050118/renders/round_3_Camera.png) | ![Round 4](test_results_images/static_scene/20260208_050118/renders/round_4_Camera.png) |
 | First render. Overexposed — desk fills most of frame, objects are tiny or out of view. Striped wood texture visible. | Similar overexposure. Keyboard GLB imported but rendered very small, floating above desk. |
 
 | Round 5 | Round 6 |
 |---------|---------|
-| ![Round 5](../output/static_scene/20260208_050118/greentea/renders/5/Camera.png) | ![Round 6](../output/static_scene/20260208_050118/greentea/renders/6/Camera.png) |
+| ![Round 5](test_results_images/static_scene/20260208_050118/renders/round_5_Camera.png) | ![Round 6](test_results_images/static_scene/20260208_050118/renders/round_6_Camera.png) |
 | Camera too close to desk surface. Striped texture dominates. Objects below view. | Better framing. Monitor screen visible (dark panel). Keyboard as dark rectangle. Headphones as torus shape. Envelope as white plane. |
 
 ### Mid Phase (Rounds 7-9): Scale Corrections + Proxy Geometry
 
 | Round 7 | Round 8 | Round 9 |
 |---------|---------|---------|
-| ![Round 7](../output/static_scene/20260208_050118/greentea/renders/7/Camera.png) | ![Round 8](../output/static_scene/20260208_050118/greentea/renders/8/Camera.png) | ![Round 9](../output/static_scene/20260208_050118/greentea/renders/9/Camera.png) |
+| ![Round 7](test_results_images/static_scene/20260208_050118/renders/round_7_Camera.png) | ![Round 8](test_results_images/static_scene/20260208_050118/renders/round_8_Camera.png) | ![Round 9](test_results_images/static_scene/20260208_050118/renders/round_9_Camera.png) |
 | Objects very small — envelope and keyboard barely visible on desk surface. Camera too high. | Monitor visible with dark screen panel. Proper perspective emerging. | Monitor with dark screen, keyboard slab, headphones as cylinders. Scene composition taking shape. |
 
 ### Late Phase (Rounds 11-17): Refinement + Materials
 
 | Round 11 | Round 13 |
 |----------|----------|
-| ![Round 11](../output/static_scene/20260208_050118/greentea/renders/11/Camera.png) | ![Round 13](../output/static_scene/20260208_050118/greentea/renders/13/Camera.png) |
+| ![Round 11](test_results_images/static_scene/20260208_050118/renders/round_11_Camera.png) | ![Round 13](test_results_images/static_scene/20260208_050118/renders/round_13_Camera.png) |
 | Similar to round 9 — monitor + keyboard composition. GLB imports maintained. | Major improvement: Monitor with white screen, blue keyboard slab, white envelope plane, small green bottle visible at bottom center. |
 
 | Round 14 | Round 16 |
 |----------|----------|
-| ![Round 14](../output/static_scene/20260208_050118/greentea/renders/14/Camera.png) | ![Round 16](../output/static_scene/20260208_050118/greentea/renders/16/Camera.png) |
+| ![Round 14](test_results_images/static_scene/20260208_050118/renders/round_14_Camera.png) | ![Round 16](test_results_images/static_scene/20260208_050118/renders/round_16_Camera.png) |
 | Adjusted camera angle. Dark keyboard visible, headphones as teal torus shape, monitor with bezel. | Laptop-style composition: white screen with black bezel, blue keyboard, white envelope planes. Clean desk scene. |
 
 | Round 17 |
 |----------|
-| ![Round 17](../output/static_scene/20260208_050118/greentea/renders/17/Camera.png) |
+| ![Round 17](test_results_images/static_scene/20260208_050118/renders/round_17_Camera.png) |
 | **Best composition.** Green textured bottle (procedural proxy with label) in foreground center. Laptop with screen behind. Blue keyboard. Headphones (gray tori) on right. Envelope on left. All elements visible and properly positioned. |
 
 ### Final Phase (Rounds 19-20): Last Iterations
 
 | Round 19 | Round 20 |
 |----------|----------|
-| ![Round 19](../output/static_scene/20260208_050118/greentea/renders/19/Camera.png) | ![Round 20](../output/static_scene/20260208_050118/greentea/renders/20/Camera.png) |
+| ![Round 19](test_results_images/static_scene/20260208_050118/renders/round_19_Camera.png) | ![Round 20](test_results_images/static_scene/20260208_050118/renders/round_20_Camera.png) |
 | Simplified composition — bottle lost green texture, monitor screen dimmed. Back wall backdrop added. | Final EEVEE state. Green-yellow bottle, laptop, headphones (tori), envelope. Objects present but simplified. |
 
 ---
@@ -147,7 +147,7 @@ Rendered from the final `blender_file.blend` using CYCLES with GPU (NVIDIA RTX 5
 
 | CYCLES Final Render |
 |---------------------|
-| ![CYCLES Final](../output/static_scene/20260208_050118/greentea/renders/final_cycles/Camera_cycles.png) |
+| ![CYCLES Final](test_results_images/static_scene/20260208_050118/renders/Camera_cycles.png) |
 | Final scene: desk with laptop (glowing screen), green-yellow bottle (center-front), blue keyboard slab, headphones (gray tori), envelope plane. CYCLES lighting adds soft shadows and realistic light falloff compared to EEVEE. |
 
 ---

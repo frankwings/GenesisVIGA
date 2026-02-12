@@ -91,10 +91,10 @@ Generated 360-degree rotation GIFs for rounds 1, 3, 13, and 19:
 
 | Round | GIF |
 |-------|-----|
-| Round 1 | ![Round 1 Rotation](../output/static_scene/20260209_143141/greentea/rotation_gif/round_1.gif) |
-| Round 3 | ![Round 3 Rotation](../output/static_scene/20260209_143141/greentea/rotation_gif/round_3.gif) |
-| Round 13 | ![Round 13 Rotation](../output/static_scene/20260209_143141/greentea/rotation_gif/round_13.gif) |
-| Round 19 (Final) | ![Round 19 Rotation](../output/static_scene/20260209_143141/greentea/rotation_gif/round_19.gif) |
+| Round 1 | ![Round 1 Rotation](test_results_images/static_scene/20260209_143141/rotation_gif/round_1.gif) |
+| Round 3 | ![Round 3 Rotation](test_results_images/static_scene/20260209_143141/rotation_gif/round_3.gif) |
+| Round 13 | ![Round 13 Rotation](test_results_images/static_scene/20260209_143141/rotation_gif/round_13.gif) |
+| Round 19 (Final) | ![Round 19 Rotation](test_results_images/static_scene/20260209_143141/rotation_gif/round_19.gif) |
 
 ---
 

@@ -44,32 +44,32 @@ GPT-5 wrote detailed text descriptions for each object, which Meshy converted to
 ## 3. Render Results
 
 ### Round 3 — First Successful Render (All Objects)
-![Round 3](../output/static_scene/20260208_224146/greentea/renders/3/Camera.png)
+![Round 3](test_results_images/static_scene/20260208_224146/renders/round_3_Camera.png)
 
 **Observations:** All 5 Meshy-generated objects visible. The green tea bottle is translucent green with correct PET bottle shape. Keyboard shows individual keys with RGB backlighting — a massive improvement over the SAM3D flat panel. Headphones have proper over-ear form with coiled cable. Envelope is a white geometric shape floating above the bottle (placement error). Table surface is white/light gray with rounded edges. Objects imported at normalized scale, arranged on tabletop.
 
 ### Round 4 — Table Scaled Up
-![Round 4](../output/static_scene/20260208_224146/greentea/renders/4/Camera.png)
+![Round 4](test_results_images/static_scene/20260208_224146/renders/round_4_Camera.png)
 
 **Observations:** Table scaled 1.8x and now dominates the frame as a proper desk. Bottle visible (small) at back-left. Headphones barely visible at right edge. Keyboard and envelope lost from frame — camera too high/far. The table itself looks excellent: proper desk shape with legs, light wood texture.
 
 ### Round 5 — Best Composition
-![Round 5](../output/static_scene/20260208_224146/greentea/renders/5/Camera.png)
+![Round 5](test_results_images/static_scene/20260208_224146/renders/round_5_Camera.png)
 
 **Observations:** Best overall render of the run. Table with four legs clearly visible as a proper desk. Bottle on the table surface (correct green color), keyboard with colorful RGB keys beside it. Headphones hanging off the right edge (partially visible). Envelope not visible in this framing. Clean, well-lit scene with good camera angle.
 
 ### Round 6 — Regression (Only Bottle)
-![Round 6](../output/static_scene/20260208_224146/greentea/renders/6/Camera.png)
+![Round 6](test_results_images/static_scene/20260208_224146/renders/round_6_Camera.png)
 
 **Observations:** Camera moved to show only bottle at the table edge with one leg visible. Most objects lost from frame. Typical VIGA oscillation where the Verifier's corrections overshoot.
 
 ### Round 7 — Extreme Close-Up (Blurry)
-![Round 7](../output/static_scene/20260208_224146/greentea/renders/7/Camera.png)
+![Round 7](test_results_images/static_scene/20260208_224146/renders/round_7_Camera.png)
 
 **Observations:** Extremely close camera angle with strong DoF blur. Only white table surface visible. Non-useful render — camera too close.
 
 ### Round 8 — Final Scene (Portrait with DoF)
-![Round 8](../output/static_scene/20260208_224146/greentea/renders/8/Camera.png)
+![Round 8](test_results_images/static_scene/20260208_224146/renders/round_8_Camera.png)
 
 **Observations:** Final composition. Portrait orientation (768x1024), 30mm lens with DoF focused on the green tea bottle. Bottle is the hero element — clearly recognizable as a green PET bottle with cap. Keyboard visible behind it with dark keycaps and RGB glow. Artistic, cinematic framing. Only 2 of 5 objects visible, but the two that are shown look excellent. Warm key light, cool fill light (color-tinted 3-point lighting).
 
@@ -79,9 +79,9 @@ GPT-5 wrote detailed text descriptions for each object, which Meshy converted to
 
 | Round | GIF |
 |-------|-----|
-| Round 3 | ![Round 3 Rotation](../output/static_scene/20260208_224146/greentea/rotation_gif/round_3.gif) |
-| Round 5 | ![Round 5 Rotation](../output/static_scene/20260208_224146/greentea/rotation_gif/round_5.gif) |
-| Round 8 (Final) | ![Round 8 Rotation](../output/static_scene/20260208_224146/greentea/rotation_gif/round_8.gif) |
+| Round 3 | ![Round 3 Rotation](test_results_images/static_scene/20260208_224146/rotation_gif/round_3.gif) |
+| Round 5 | ![Round 5 Rotation](test_results_images/static_scene/20260208_224146/rotation_gif/round_5.gif) |
+| Round 8 (Final) | ![Round 8 Rotation](test_results_images/static_scene/20260208_224146/rotation_gif/round_8.gif) |
 
 ---
 

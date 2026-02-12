@@ -95,7 +95,7 @@ The run produced **58 scripts** and **36 rendered Camera.png** frames across 58 
 
 ### Target Image
 
-![Target](../data/static_scene/greentea/target.png)
+![Target](test_results_images/greentea/target.png)
 
 ### Render Gallery (All Rounds)
 
@@ -103,85 +103,85 @@ The run produced **58 scripts** and **36 rendered Camera.png** frames across 58 
 
 | Round 7 | Round 8 | Round 9 |
 |---------|---------|---------|
-| ![Round 7](../output/static_scene/20260207_030656/greentea/renders/7/Camera.png) | ![Round 8](../output/static_scene/20260207_030656/greentea/renders/8/Camera.png) | ![Round 9](../output/static_scene/20260207_030656/greentea/renders/9/Camera.png) |
+| ![Round 7](test_results_images/static_scene/20260207_030656/renders/round_7_Camera.png) | ![Round 8](test_results_images/static_scene/20260207_030656/renders/round_8_Camera.png) | ![Round 9](test_results_images/static_scene/20260207_030656/renders/round_9_Camera.png) |
 | First successful render. Dark green bottle, teal keyboard bar, ring objects. | Bottle refined, similar composition. | Lime green bottle (closer to target). Improved lighting. |
 
 | Round 12 | Round 13 |
 |----------|----------|
-| ![Round 12](../output/static_scene/20260207_030656/greentea/renders/12/Camera.png) | ![Round 13](../output/static_scene/20260207_030656/greentea/renders/13/Camera.png) |
+| ![Round 12](test_results_images/static_scene/20260207_030656/renders/round_12_Camera.png) | ![Round 13](test_results_images/static_scene/20260207_030656/renders/round_13_Camera.png) |
 | Camera angle changed. Teal keyboard with gray body. Small green-capped bottle. | Continued refinement of scene composition. |
 
 #### Mid Phase (Rounds 15-26): Refinement & Early Drift
 
 | Round 15 | Round 16 | Round 18 |
 |----------|----------|----------|
-| ![Round 15](../output/static_scene/20260207_030656/greentea/renders/15/Camera.png) | ![Round 16](../output/static_scene/20260207_030656/greentea/renders/16/Camera.png) | ![Round 18](../output/static_scene/20260207_030656/greentea/renders/18/Camera.png) |
+| ![Round 15](test_results_images/static_scene/20260207_030656/renders/round_15_Camera.png) | ![Round 16](test_results_images/static_scene/20260207_030656/renders/round_16_Camera.png) | ![Round 18](test_results_images/static_scene/20260207_030656/renders/round_18_Camera.png) |
 | Scene evolving. | Keyboard prominent. White papers added. Bottle pushed aside. | Continued iteration. |
 
 | Round 19 | Round 21 | Round 23 |
 |----------|----------|----------|
-| ![Round 19](../output/static_scene/20260207_030656/greentea/renders/19/Camera.png) | ![Round 21](../output/static_scene/20260207_030656/greentea/renders/21/Camera.png) | ![Round 23](../output/static_scene/20260207_030656/greentea/renders/23/Camera.png) |
+| ![Round 19](test_results_images/static_scene/20260207_030656/renders/round_19_Camera.png) | ![Round 21](test_results_images/static_scene/20260207_030656/renders/round_21_Camera.png) | ![Round 23](test_results_images/static_scene/20260207_030656/renders/round_23_Camera.png) |
 | Scene restructured. | Yellow-green bottle returns with white cap. Shadow on desk. | Bottle with bands and cap. |
 
 | Round 25 | Round 26 |
 |----------|----------|
-| ![Round 25](../output/static_scene/20260207_030656/greentea/renders/25/Camera.png) | ![Round 26](../output/static_scene/20260207_030656/greentea/renders/26/Camera.png) |
+| ![Round 25](test_results_images/static_scene/20260207_030656/renders/round_25_Camera.png) | ![Round 26](test_results_images/static_scene/20260207_030656/renders/round_26_Camera.png) |
 | Green bottle with horizontal bands. Teal screen corner. Good color match. | Continued refinement. |
 
 #### Late Phase (Rounds 28-44): Scene Drift
 
 | Round 28 | Round 30 | Round 33 |
 |----------|----------|----------|
-| ![Round 28](../output/static_scene/20260207_030656/greentea/renders/28/Camera.png) | ![Round 30](../output/static_scene/20260207_030656/greentea/renders/30/Camera.png) | ![Round 33](../output/static_scene/20260207_030656/greentea/renders/33/Camera.png) |
+| ![Round 28](test_results_images/static_scene/20260207_030656/renders/round_28_Camera.png) | ![Round 30](test_results_images/static_scene/20260207_030656/renders/round_30_Camera.png) | ![Round 33](test_results_images/static_scene/20260207_030656/renders/round_33_Camera.png) |
 | Scene changing. | Extreme camera angle. Bottle at corner. Overexposed. | Scene restructured again. |
 
 | Round 34 | Round 36 | Round 38 |
 |----------|----------|----------|
-| ![Round 34](../output/static_scene/20260207_030656/greentea/renders/34/Camera.png) | ![Round 36](../output/static_scene/20260207_030656/greentea/renders/36/Camera.png) | ![Round 38](../output/static_scene/20260207_030656/greentea/renders/38/Camera.png) |
+| ![Round 34](test_results_images/static_scene/20260207_030656/renders/round_34_Camera.png) | ![Round 36](test_results_images/static_scene/20260207_030656/renders/round_36_Camera.png) | ![Round 38](test_results_images/static_scene/20260207_030656/renders/round_38_Camera.png) |
 | Continued drift. | Further changes. | Monitor, keyboard with gray keycaps, ring objects. Small bottle. |
 
 | Round 41 | Round 42 | Round 43 |
 |----------|----------|----------|
-| ![Round 41](../output/static_scene/20260207_030656/greentea/renders/41/Camera.png) | ![Round 42](../output/static_scene/20260207_030656/greentea/renders/42/Camera.png) | ![Round 43](../output/static_scene/20260207_030656/greentea/renders/43/Camera.png) |
+| ![Round 41](test_results_images/static_scene/20260207_030656/renders/round_41_Camera.png) | ![Round 42](test_results_images/static_scene/20260207_030656/renders/round_42_Camera.png) | ![Round 43](test_results_images/static_scene/20260207_030656/renders/round_43_Camera.png) |
 | Scene iteration. | Green-yellow bottle with keyboard and monitor. Bottle is secondary. | Continued changes. |
 
 | Round 44 |
 |----------|
-| ![Round 44](../output/static_scene/20260207_030656/greentea/renders/44/Camera.png) |
+| ![Round 44](test_results_images/static_scene/20260207_030656/renders/round_44_Camera.png) |
 | Further drift from target. |
 
 #### Final Phase (Rounds 45-58): Divergence
 
 | Round 45 | Round 46 | Round 47 |
 |----------|----------|----------|
-| ![Round 45](../output/static_scene/20260207_030656/greentea/renders/45/Camera.png) | ![Round 46](../output/static_scene/20260207_030656/greentea/renders/46/Camera.png) | ![Round 47](../output/static_scene/20260207_030656/greentea/renders/47/Camera.png) |
+| ![Round 45](test_results_images/static_scene/20260207_030656/renders/round_45_Camera.png) | ![Round 46](test_results_images/static_scene/20260207_030656/renders/round_46_Camera.png) | ![Round 47](test_results_images/static_scene/20260207_030656/renders/round_47_Camera.png) |
 | Scene heavily modified. | Continued iteration. | Further changes. |
 
 | Round 48 | Round 49 | Round 50 |
 |----------|----------|----------|
-| ![Round 48](../output/static_scene/20260207_030656/greentea/renders/48/Camera.png) | ![Round 49](../output/static_scene/20260207_030656/greentea/renders/49/Camera.png) | ![Round 50](../output/static_scene/20260207_030656/greentea/renders/50/Camera.png) |
+| ![Round 48](test_results_images/static_scene/20260207_030656/renders/round_48_Camera.png) | ![Round 49](test_results_images/static_scene/20260207_030656/renders/round_49_Camera.png) | ![Round 50](test_results_images/static_scene/20260207_030656/renders/round_50_Camera.png) |
 | Desk setup focus. | Continued drift. | Scene diverged from target. |
 
 | Round 51 | Round 52 | Round 53 |
 |----------|----------|----------|
-| ![Round 51](../output/static_scene/20260207_030656/greentea/renders/51/Camera.png) | ![Round 52](../output/static_scene/20260207_030656/greentea/renders/52/Camera.png) | ![Round 53](../output/static_scene/20260207_030656/greentea/renders/53/Camera.png) |
+| ![Round 51](test_results_images/static_scene/20260207_030656/renders/round_51_Camera.png) | ![Round 52](test_results_images/static_scene/20260207_030656/renders/round_52_Camera.png) | ![Round 53](test_results_images/static_scene/20260207_030656/renders/round_53_Camera.png) |
 | Near-final state. | "ALIENWARE" text on keyboard. Bottle no longer focus. | Continued. |
 
 | Round 55 | Round 56 | Round 57 |
 |----------|----------|----------|
-| ![Round 55](../output/static_scene/20260207_030656/greentea/renders/55/Camera.png) | ![Round 56](../output/static_scene/20260207_030656/greentea/renders/56/Camera.png) | ![Round 57](../output/static_scene/20260207_030656/greentea/renders/57/Camera.png) |
+| ![Round 55](test_results_images/static_scene/20260207_030656/renders/round_55_Camera.png) | ![Round 56](test_results_images/static_scene/20260207_030656/renders/round_56_Camera.png) | ![Round 57](test_results_images/static_scene/20260207_030656/renders/round_57_Camera.png) |
 | Late iteration. | Near end. | Almost final. |
 
 | Round 58 |
 |----------|
-| ![Round 58](../output/static_scene/20260207_030656/greentea/renders/58/Camera.png) |
+| ![Round 58](test_results_images/static_scene/20260207_030656/renders/round_58_Camera.png) |
 | Last EEVEE render before termination. |
 
 ### Final CYCLES Render
 
 | CYCLES Final |
 |-------------|
-| ![CYCLES Final](../output/static_scene/20260207_030656/greentea/CYCLES_final_Camera.png) |
+| ![CYCLES Final](test_results_images/static_scene/20260207_030656/renders/CYCLES_final_Camera.png) |
 | CYCLES GPU render (512 samples, 1024x1024) of the final scene state. |
 
 ### Key Observations

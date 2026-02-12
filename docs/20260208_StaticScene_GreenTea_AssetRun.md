@@ -85,12 +85,12 @@ These scripts contain `import_glb()` calls with relative paths. The imports **fa
 
 | Round 4 | Round 5 |
 |---------|---------|
-| ![Round 4](../output/static_scene/20260207_225603/greentea/renders/4/Camera.png) | ![Round 5](../output/static_scene/20260207_225603/greentea/renders/5/Camera.png) |
+| ![Round 4](test_results_images/static_scene/20260207_225603/renders/round_4_Camera.png) | ![Round 5](test_results_images/static_scene/20260207_225603/renders/round_5_Camera.png) |
 | First render. GLB imports failed silently — objects are procedural fallbacks. | Similar procedural scene. GLB files not loaded. |
 
 | Round 7 | Round 8 |
 |---------|---------|
-| ![Round 7](../output/static_scene/20260207_225603/greentea/renders/7/Camera.png) | ![Round 8](../output/static_scene/20260207_225603/greentea/renders/8/Camera.png) |
+| ![Round 7](test_results_images/static_scene/20260207_225603/renders/round_7_Camera.png) | ![Round 8](test_results_images/static_scene/20260207_225603/renders/round_8_Camera.png) |
 | Still attempting GLB imports with relative paths. | Last script with GLB import code. |
 
 #### Late Phase (Rounds 11-19): Fully Procedural
@@ -99,17 +99,17 @@ After repeated failures, the Generator abandoned GLB imports and switched to ful
 
 | Round 11 | Round 13 | Round 15 |
 |----------|----------|----------|
-| ![Round 11](../output/static_scene/20260207_225603/greentea/renders/11/Camera.png) | ![Round 13](../output/static_scene/20260207_225603/greentea/renders/13/Camera.png) | ![Round 15](../output/static_scene/20260207_225603/greentea/renders/15/Camera.png) |
+| ![Round 11](test_results_images/static_scene/20260207_225603/renders/round_11_Camera.png) | ![Round 13](test_results_images/static_scene/20260207_225603/renders/round_13_Camera.png) | ![Round 15](test_results_images/static_scene/20260207_225603/renders/round_15_Camera.png) |
 | Fully procedural. No GLB imports. | Procedural scene refinement. | Procedural bottle and desk. |
 
 | Round 16 | Round 17 | Round 18 |
 |----------|----------|----------|
-| ![Round 16](../output/static_scene/20260207_225603/greentea/renders/16/Camera.png) | ![Round 17](../output/static_scene/20260207_225603/greentea/renders/17/Camera.png) | ![Round 18](../output/static_scene/20260207_225603/greentea/renders/18/Camera.png) |
+| ![Round 16](test_results_images/static_scene/20260207_225603/renders/round_16_Camera.png) | ![Round 17](test_results_images/static_scene/20260207_225603/renders/round_17_Camera.png) | ![Round 18](test_results_images/static_scene/20260207_225603/renders/round_18_Camera.png) |
 | Continued procedural iteration. | Scene refinement. | Near-final state. |
 
 | Round 19 |
 |----------|
-| ![Round 19](../output/static_scene/20260207_225603/greentea/renders/19/Camera.png) |
+| ![Round 19](test_results_images/static_scene/20260207_225603/renders/round_19_Camera.png) |
 | Final render. Fully procedural — simple primitives, no GLB assets visible. |
 
 ---

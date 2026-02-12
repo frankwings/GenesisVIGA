@@ -517,7 +517,75 @@ VIGA works with multiple vision-language models as the Generator and Verifier:
 
 ---
 
-## 10. Run Commands
+## 10. Environment
+
+### Hardware
+
+| Component | Spec |
+|-----------|------|
+| GPU | NVIDIA GeForce RTX 5080 (16 GB VRAM, Blackwell sm_120) |
+| OS | Windows 11 Home 10.0.26200 |
+| NVIDIA Driver | 591.74 |
+
+### Conda Environments
+
+VIGA uses two separate conda environments: one for the agent orchestration loop, and one for SAM3D GPU inference.
+
+#### `agent` — VIGA orchestration (Generator + Verifier + Meshy + Blender)
+
+```
+Python 3.10.19
+C:\Users\kingy\miniconda3\envs\agent\python.exe
+```
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| openai | 2.6.1 | VLM API client (GPT-5, GPT-4o) |
+| mcp | 1.20.0 | Model Context Protocol — tool server framework |
+| httpx | 0.28.1 | HTTP client for Meshy API calls |
+| numpy | 2.2.6 | Array operations |
+| pillow | 12.0.0 | Image processing (GIF generation, resizing) |
+| python-pptx | 1.0.2 | PowerPoint generation |
+| lxml | 6.0.2 | XML parsing (used by python-pptx) |
+| uvicorn | 0.38.0 | ASGI server for MCP tool servers |
+| starlette | 0.50.0 | Web framework (MCP transport) |
+| pydantic | 2.12.3 | Data validation (MCP schemas) |
+| gpustat | 1.1.1 | GPU monitoring |
+| tqdm | 4.67.1 | Progress bars |
+
+#### `sam3d_viga` — SAM3D GPU inference (segmentation + 3D reconstruction)
+
+```
+Python 3.11.14
+C:\Users\kingy\miniconda3\envs\sam3d_viga\python.exe
+```
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| torch | 2.5.1+cu121 | PyTorch with CUDA 12.1 |
+| torchvision | 0.20.1+cu121 | Image transforms for SAM |
+| kaolin | 0.17.0 | NVIDIA 3D deep learning (mesh ops, GLB export) |
+| pytorch3d | 0.7.9 | 3D transforms, rendering |
+| segment-anything | 1.0 | Meta SAM (ViT-H segmentation) |
+| open3d | 0.18.0 | Point cloud processing |
+| trimesh | 4.11.1 | Mesh I/O and manipulation |
+| spconv-cu121 | 2.3.8 | Sparse convolution (TRELLIS backbone) |
+| pillow | 12.0.0 | Image I/O |
+| numpy | 1.26.4 | Array operations |
+
+**Note:** SAM3D requires `kaolin >= 0.17.0` for RTX 5080 (Blackwell sm_120) support. PyTorch 2.5.1 with CUDA 12.1 is the tested configuration. The `sam3d_viga` environment is invoked as a subprocess from the `agent` environment — SAM3D's `init.py` tool server spawns `sam_worker.py` and `sam3d_worker.py` using this environment's Python.
+
+### External Tools
+
+| Tool | Version | Path |
+|------|---------|------|
+| Blender | 4.5.5 LTS | `C:\Program Files\Blender Foundation\Blender 4.5\blender.exe` |
+| SAM checkpoint | ViT-H (2.4 GB) | `utils/third_party/sam/sam_vit_h_4b8939.pth` |
+| TRELLIS checkpoints | — | `utils/third_party/sam3d/checkpoints/hf/` |
+
+---
+
+## 11. Run Commands
 
 ### Static scene (Meshy only)
 ```bash

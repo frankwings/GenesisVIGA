@@ -10,7 +10,7 @@ CLI: OpenClaw Claude Code
 Model: Claude 3.5 Haiku → Claude 3.5 Sonnet
 Platform: Windows 11 + RTX 5080
 Python Envs: sam, sam3d_py311
-Working Dir: D:\Projects\ProjectGenesis\GenesisVIGA
+Working Dir: GenesisVIGA (project root)
 ```
 
 ## Test Overview
@@ -33,7 +33,7 @@ This report documents the SAM3D object segmentation and 3D reconstruction testin
 **Command Executed:**
 
 ```bash
-cd "D:\Projects\ProjectGenesis\GenesisVIGA"
+cd GenesisVIGA
 conda run -n sam3d_py311 --no-capture-output python run_all_masks_sam3d.py
 ```
 
@@ -66,7 +66,7 @@ ModuleNotFoundError: No module named 'open3d'
 **Search Command:**
 
 ```powershell
-Get-ChildItem "D:\Projects\ProjectGenesis\GenesisVIGA" -Recurse -Include "*.py" | Select-String -Pattern "sam3d|SAM3D"
+Get-ChildItem "." -Recurse -Include "*.py" | Select-String -Pattern "sam3d|SAM3D"
 ```
 
 **VIGA Invocation System Discovered:**
@@ -177,9 +177,9 @@ Incorrect logic: High coverage = over-coverage = poor quality
 **Command Executed:**
 
 ```bash
-conda run -n sam python "D:\Projects\ProjectGenesis\GenesisVIGA\tools\sam3d\sam_worker.py" \
-    --image "D:\Projects\ProjectGenesis\GenesisVIGA\docs\test_results_images\01_greentea_input.jpg" \
-    --out "D:\Projects\ProjectGenesis\GenesisVIGA\output\test_viga_sam_fixed\all_masks.npy"
+conda run -n sam python "tools\sam3d\sam_worker.py" \
+    --image "docs\test_results_images\01_greentea_input.jpg" \
+    --out "output\test_viga_sam_fixed\all_masks.npy"
 ```
 
 **Algorithm Improvement Comparison:**

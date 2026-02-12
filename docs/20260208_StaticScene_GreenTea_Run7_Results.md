@@ -30,10 +30,10 @@
 ## 2. Run Configuration
 
 ```bash
-"C:/Users/kingy/miniconda3/envs/agent/python.exe" runners/static_scene.py \
+python runners/static_scene.py \
     --task=greentea \
     --model=gpt-5 \
-    --blender-command="C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+    --blender-command=blender \
     --blender-script="data/static_scene/generator_script_eevee.py" \
     --prompt-setting=get_asset_simple \
     --max-rounds=15
@@ -159,7 +159,7 @@ Rotation renders (36 frames each, EEVEE, 512x512) for key rounds:
 
 1. **`get_asset_simple` prompt eliminated procedural geometry.** Across all 8 scene scripts and 9 rounds, the Generator never created a single procedural proxy object. This is a major improvement over Run 5 (`get_asset`), where procedural cylinders and cubes obscured the GLB models in nearly every script.
 
-2. **All 5 GLB assets loaded correctly in every script.** The absolute path fix from previous sessions held — all paths used exact `d:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/*.glb` format.
+2. **All 5 GLB assets loaded correctly in every script.** The absolute path fix from previous sessions held — all paths used exact `data/static_scene/greentea/assets/*.glb` format.
 
 3. **Iterative refinement progressed meaningfully.** Over 9 rounds:
    - Camera angle improved from distant wide-angle to close-up 32mm

@@ -78,7 +78,7 @@ Output keys: dict_keys([
     'glb', 'gs', 'pointmap', 'pointmap_colors'
 ])
 
-Saved GLB to: D:\Projects\ProjectGenesis\GenesisVIGA\output\sam3d_test\green_tea_bottle.glb
+Saved GLB to: output\sam3d_test\green_tea_bottle.glb
 ```
 
 ## Comparison with WSL

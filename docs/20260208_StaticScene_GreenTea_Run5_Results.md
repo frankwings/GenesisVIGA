@@ -27,10 +27,10 @@
 ## 2. Run Configuration
 
 ```bash
-"C:/Users/kingy/miniconda3/envs/agent/python.exe" runners/static_scene.py \
+"python" runners/static_scene.py \
     --task=greentea \
     --model=gpt-5 \
-    --blender-command="C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+    --blender-command="blender" \
     --blender-script="data/static_scene/generator_script_eevee.py" \
     --prompt-setting=get_asset \
     --max-rounds=25
@@ -53,13 +53,13 @@ All 3 assets matched locally via fuzzy matching (no Meshy API call needed):
 
 | Tool Call | Object Name | Result | Absolute Path |
 |-----------|-------------|--------|---------------|
-| `get_better_object` | `green tea bottle` | Matched `green_tea_bottle.glb` | `D:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/green_tea_bottle.glb` |
-| `get_better_object` | `keyboard` | Matched `alienware_keyboard.glb` | `D:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/alienware_keyboard.glb` |
-| `get_better_object` | `headphones` | Matched `headphones.glb` | `D:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/headphones.glb` |
+| `get_better_object` | `green tea bottle` | Matched `green_tea_bottle.glb` | `data/static_scene/greentea/assets/green_tea_bottle.glb` |
+| `get_better_object` | `keyboard` | Matched `alienware_keyboard.glb` | `data/static_scene/greentea/assets/alienware_keyboard.glb` |
+| `get_better_object` | `headphones` | Matched `headphones.glb` | `data/static_scene/greentea/assets/headphones.glb` |
 
 **Note:** The `envelope.glb` asset was not requested in this run.
 
-**Key Improvement over Run 4:** All paths are now absolute with forward slashes (e.g., `D:/Projects/.../green_tea_bottle.glb`), which resolve correctly from any Blender working directory.
+**Key Improvement over Run 4:** All paths are now absolute with forward slashes (e.g., `<project root>/data/.../green_tea_bottle.glb`), which resolve correctly from any Blender working directory.
 
 ---
 
@@ -156,7 +156,7 @@ Rendered from the final `blender_file.blend` using CYCLES with GPU (NVIDIA RTX 5
 
 | Aspect | Run 4 (20260207_225603) | Run 5 (20260208_050118) |
 |--------|------------------------|------------------------|
-| GLB path type | Relative (`data\static_scene\...`) | Absolute (`D:/Projects/...`) |
+| GLB path type | Relative (`data\static_scene\...`) | Absolute (`<project root>/...`) |
 | Scripts with GLB imports | 8 of 19 (42%) | 18 of 20 (90%) |
 | GLB imports successful | **No** — silent failures | **Yes** — absolute paths resolve from any Blender CWD |
 | Fell back to procedural | Yes (scripts 9-19) | No — GLB imports maintained throughout |

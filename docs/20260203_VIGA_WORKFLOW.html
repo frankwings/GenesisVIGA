@@ -223,7 +223,7 @@
             <h2>调用命令</h2>
             <div class="code-block">
 <span style="color: var(--accent-purple);"># 设置 PYTHONPATH</span>
-$env:PYTHONPATH = "D:\Projects\ProjectGenesis\GenesisVIGA"
+$env:PYTHONPATH = "."
 
 <span style="color: var(--accent-purple);"># 运行 VIGA SAM3D Worker</span>
 conda run -n sam3d_py311 python "tools\sam3d\sam3d_worker.py" `
@@ -325,7 +325,6 @@ return self._pipeline.run(
         <section>
             <h2>文件结构</h2>
             <div class="code-block">
-D:\Projects\ProjectGenesis\GenesisVIGA\
 ├── tools\sam3d\
 │   ├── sam3d_worker.py      <span style="color: var(--text-secondary);"># VIGA 的 SAM3D 调用脚本</span>
 │   ├── sam3_worker.py       <span style="color: var(--text-secondary);"># SAM3 分割脚本</span>

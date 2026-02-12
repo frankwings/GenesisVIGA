@@ -48,7 +48,7 @@ Open-source 3D creation software. Executes Python scripts for geometry, material
 - Cycles/EEVEE rendering
 - Python scripting API
 - Procedural modeling
-- `C:\Program Files\Blender Foundation\Blender 4.5\`
+- `<blender install dir>`
 
 **Meshy API**
 Text-to-3D and Image-to-3D. Creates detailed 3D assets with PBR textures.
@@ -320,7 +320,7 @@ VIGA/
 ```bash
 # Dynamic Scene (VLM-based, what we tested)
 python runners/dynamic_scene.py --task greentea --model gpt-4o \
-    --blender-command "C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+    --blender-command "blender" \
     --max-rounds 20
 
 # With SAM initialization (auto-detect objects)

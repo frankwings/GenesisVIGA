@@ -155,7 +155,7 @@
             </div>
             
             <h3>Usage</h3>
-            <pre><code>$env:PYTHONPATH = "D:\Projects\ProjectGenesis\GenesisVIGA"
+            <pre><code>$env:PYTHONPATH = "."
 conda run -n sam3d_py311 python tools/sam3d/sam3d_worker.py `
     --image "input.png" `
     --mask "mask.npy" `
@@ -256,7 +256,7 @@ blender --background --python tools/blender_render_rotation.py -- input.glb outp
             <h2>🔄 Complete Workflow</h2>
             
             <pre><code># 1. Run SAM3D to generate GLB
-$env:PYTHONPATH = "D:\Projects\ProjectGenesis\GenesisVIGA"
+$env:PYTHONPATH = "."
 conda run -n sam3d_py311 python tools/sam3d/sam3d_worker.py `
     --image input.png --mask mask.npy `
     --config utils/third_party/sam3d/checkpoints/hf/checkpoints/pipeline.yaml `

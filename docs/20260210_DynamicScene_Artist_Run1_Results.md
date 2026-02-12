@@ -19,10 +19,10 @@
 | Generator Tools | `exec.py`, `generator_base.py`, `meshy.py`, `sam3d/init.py`, `initialize_plan.py` |
 
 ```bash
-"C:/Users/kingy/miniconda3/envs/agent/python.exe" runners/dynamic_scene.py \
+python runners/dynamic_scene.py \
   --task=artist \
   --model=gpt-5 \
-  --blender-command="C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+  --blender-command=blender \
   --blender-script="data/dynamic_scene/generator_script.py" \
   --prompt-setting=get_asset_sam3d \
   --generator-tools="tools/blender/exec.py,tools/generator_base.py,tools/assets/meshy.py,tools/sam3d/init.py,tools/initialize_plan.py" \

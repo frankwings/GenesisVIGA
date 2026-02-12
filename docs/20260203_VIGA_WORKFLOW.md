@@ -29,7 +29,7 @@ Input Image + Mask (.npy)  -->  SAM3D Inference  -->  Coordinate Transform (VIGA
 
 ```powershell
 # Set PYTHONPATH
-$env:PYTHONPATH = "D:\Projects\ProjectGenesis\GenesisVIGA"
+$env:PYTHONPATH = "."
 
 # Run VIGA SAM3D Worker
 conda run -n sam3d_py311 python "tools\sam3d\sam3d_worker.py" `
@@ -125,7 +125,6 @@ return self._pipeline.run(
 ## File Structure
 
 ```
-D:\Projects\ProjectGenesis\GenesisVIGA\
 ├── tools\sam3d\
 │   ├── sam3d_worker.py      # VIGA's SAM3D invocation script
 │   ├── sam3_worker.py       # SAM3 segmentation script

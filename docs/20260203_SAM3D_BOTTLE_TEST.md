@@ -129,8 +129,8 @@
 
 ```powershell
 # Run SAM3D on Windows (PowerShell)
-Set-Location D:\Projects\ProjectGenesis\GenesisVIGA
-$env:PYTHONPATH = "D:\Projects\ProjectGenesis\GenesisVIGA"
+Set-Location .
+$env:PYTHONPATH = "."
 
 conda run -n sam3d_py311 --no-capture-output python "tools\sam3d\sam3d_worker.py" `
     --image "output\test_sam\ito_en_green_tea_bottle.png" `
@@ -141,7 +141,7 @@ conda run -n sam3d_py311 --no-capture-output python "tools\sam3d\sam3d_worker.py
 
 ```powershell
 # Render GLB with Blender (PowerShell)
-& 'C:\Program Files\Blender Foundation\Blender 4.5\blender.exe' --background `
+& 'blender' --background `
     --python "render_glb.py" -- `
     "output\viga_test\ito_en_green_tea_bottle.glb" `
     "docs\test_results_images\ito_en_green_tea_bottle_render.png"

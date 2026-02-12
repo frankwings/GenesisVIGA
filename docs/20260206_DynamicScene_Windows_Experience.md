@@ -26,16 +26,16 @@
 
 | 项目 | 路径/值 |
 |------|---------|
-| Blender | `C:\Program Files\Blender Foundation\Blender 4.5\blender.exe` |
-| Python | `C:\Users\kingy\miniconda3\envs\agent\python.exe` |
-| 项目根目录 | `D:\Projects\ProjectGenesis\GenesisVIGA` |
+| Blender | `blender` |
+| Python | `python` |
+| 项目根目录 | `GenesisVIGA` (project root) |
 | 模型 | GPT-5 (通过 OpenAI API) |
 | EEVEE 引擎 | `BLENDER_EEVEE_NEXT` (Blender 4.x) |
 
 ## 2. 运行命令
 
 ```bash
-"C:/Users/kingy/miniconda3/envs/agent/python.exe" runners/dynamic_scene.py --task=artist --model=gpt-5 --blender-command="C:/Program Files/Blender Foundation/Blender 4.5/blender.exe"
+"python" runners/dynamic_scene.py --task=artist --model=gpt-5 --blender-command="blender"
 ```
 
 **注意:** 在 bash/terminal 中使用正斜杠 (`/`) 路径，不要用反斜杠。
@@ -44,9 +44,9 @@
 
 ### 3.1 路径解析错误 — 渲染输出到错误盘符
 
-**现象:** Blender 渲染的图片保存到了 `C:\output\...` 而不是 `D:\Projects\...\output\...`
+**现象:** Blender 渲染的图片保存到了 `C:\output\...` 而不是 `<project root>\output\...`
 
-**原因:** Blender 在 `--background` 模式下，`scene.render.filepath` 如果是相对路径，会相对于 Blender 自身的工作目录解析（即 `C:\Program Files\Blender Foundation\Blender 4.5\`），而不是 Python 脚本的工作目录。
+**原因:** Blender 在 `--background` 模式下，`scene.render.filepath` 如果是相对路径，会相对于 Blender 自身的工作目录解析（即 `<blender install dir>`），而不是 Python 脚本的工作目录。
 
 **修复:** 在 `exec.py` 和 `investigator_core.py` 的 `__init__` 中，对所有 `Path` 对象调用 `.resolve()` 转为绝对路径：
 

@@ -27,10 +27,10 @@
 ## 2. Run Configuration
 
 ```bash
-"C:/Users/kingy/miniconda3/envs/agent/python.exe" runners/static_scene.py \
+"python" runners/static_scene.py \
     --task=greentea \
     --model=gpt-5 \
-    --blender-command="C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+    --blender-command="blender" \
     --blender-script="data/static_scene/generator_script_eevee.py" \
     --prompt-setting=get_asset \
     --max-rounds=25
@@ -191,10 +191,10 @@ matching_files.append(self.previous_assets_dir + '/' + filename)
 
 After the fix, `check_previous_asset` now returns:
 ```
-D:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/green_tea_bottle.glb
-D:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/alienware_keyboard.glb
-D:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/headphones.glb
-D:/Projects/ProjectGenesis/GenesisVIGA/data/static_scene/greentea/assets/envelope.glb
+data/static_scene/greentea/assets/green_tea_bottle.glb
+data/static_scene/greentea/assets/alienware_keyboard.glb
+data/static_scene/greentea/assets/headphones.glb
+data/static_scene/greentea/assets/envelope.glb
 ```
 
 These absolute paths with forward slashes will work from any Blender working directory.

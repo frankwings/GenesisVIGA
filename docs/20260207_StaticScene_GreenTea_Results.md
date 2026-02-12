@@ -27,10 +27,10 @@
 ## 2. Run Configuration
 
 ```bash
-"C:/Users/kingy/miniconda3/envs/agent/python.exe" runners/static_scene.py \
+"python" runners/static_scene.py \
     --task=greentea \
     --model=gpt-5 \
-    --blender-command="C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+    --blender-command="blender" \
     --blender-script="data/static_scene/generator_script_eevee.py" \
     --prompt-setting=none
 ```

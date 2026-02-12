@@ -108,10 +108,10 @@ Added `"get_asset_sam3d"` to `--prompt-setting` choices.
 ## Run Command
 
 ```bash
-"C:/Users/kingy/miniconda3/envs/agent/python.exe" runners/static_scene.py \
+python runners/static_scene.py \
   --task=greentea \
   --model=gpt-5 \
-  --blender-command="C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+  --blender-command=blender \
   --blender-script="data/static_scene/generator_script_eevee.py" \
   --prompt-setting=get_asset_sam3d \
   --generator-tools="tools/blender/exec.py,tools/generator_base.py,tools/assets/meshy.py,tools/sam3d/init.py,tools/initialize_plan.py" \
@@ -194,7 +194,7 @@ Runs the MCP tool servers that communicate with Blender via subprocess. Does NOT
 
 Blender runs as a separate process (`--background` mode) with its own bundled Python 3.11. VIGA invokes it via subprocess, passing Blender Python scripts that import GLBs, set up scenes, and render images.
 
-- **Executable:** `C:\Program Files\Blender Foundation\Blender 4.5\blender.exe`
+- **Executable:** `blender`
 - **Render engine:** EEVEE Next (`BLENDER_EEVEE_NEXT`)
 - **Script:** `data/static_scene/generator_script_eevee.py`
 

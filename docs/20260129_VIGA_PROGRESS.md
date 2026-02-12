@@ -58,7 +58,7 @@ VIGA uses a **dual-agent iterative system**. Each **round** is one complete cycl
 - Animation: tips over (frame 30), rolls (frame 60)
 
 > **Output Files:**
-> `D:\Projects\ProjectGenesis\VIGA\output\dynamic_scene\20260129_235234\greentea\blender_file_improved.blend`
+> `output\dynamic_scene\20260129_235234\greentea\blender_file_improved.blend`
 
 ## Test 2: Cezanne Still Life
 
@@ -94,7 +94,7 @@ VIGA uses a **dual-agent iterative system**. Each **round** is one complete cycl
 - 3 Cameras, Point light
 
 > **Output File:**
-> `D:\Projects\ProjectGenesis\VIGA\output\dynamic_scene\20260129_235727\artist\blender_file.blend`
+> `output\dynamic_scene\20260129_235727\artist\blender_file.blend`
 
 ## Issues Found & Fixes Applied
 
@@ -151,18 +151,17 @@ VIGA uses a **dual-agent iterative system**. Each **round** is one complete cycl
 
 ### API Keys Location
 
-`D:\Projects\ProjectGenesis\VIGA\utils\_api_keys.py`
+`utils\_api_keys.py`
 
 ### Blender Path
 
-`C:\Program Files\Blender Foundation\Blender 4.5\blender.exe`
+`blender`
 
 ### Run Command
 
 ```bash
-cd D:/Projects/ProjectGenesis/VIGA
 python runners/dynamic_scene.py --task <task_name> --model gpt-4o \
-  --blender-command "C:/Program Files/Blender Foundation/Blender 4.5/blender.exe" \
+  --blender-command "blender" \
   --max-rounds 20
 ```
 

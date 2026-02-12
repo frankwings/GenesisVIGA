@@ -212,7 +212,7 @@
             Model: Claude 3.5 Haiku → Claude 3.5 Sonnet<br>
             Platform: Windows 11 + RTX 5080<br>
             Python Envs: sam, sam3d_py311<br>
-            Working Dir: D:\Projects\ProjectGenesis\GenesisVIGA
+            Working Dir: .
         </div>
 
         <h2>📋 测试概览</h2>
@@ -245,7 +245,7 @@
             <p class="timestamp">时间: 2026-02-04 20:06 - 20:09 PST</p>
             
             <h4>执行命令:</h4>
-            <div class="code">cd "D:\Projects\ProjectGenesis\GenesisVIGA"<br>
+            <div class="code">cd "."<br>
 conda run -n sam3d_py311 --no-capture-output python run_all_masks_sam3d.py</div>
             
             <h4>结果:</h4>
@@ -278,7 +278,7 @@ ModuleNotFoundError: No module named 'open3d'</div>
             <p class="timestamp">时间: 2026-02-04 20:29 - 20:34 PST</p>
             
             <h4>搜索命令:</h4>
-            <div class="code">Get-ChildItem "D:\Projects\ProjectGenesis\GenesisVIGA" -Recurse -Include "*.py" | Select-String -Pattern "sam3d|SAM3D"</div>
+            <div class="code">Get-ChildItem "." -Recurse -Include "*.py" | Select-String -Pattern "sam3d|SAM3D"</div>
             
             <h4>🎯 发现的 VIGA 调用体系:</h4>
             <table>
@@ -452,9 +452,9 @@ ModuleNotFoundError: No module named 'open3d'</div>
             <p class="timestamp">时间: 2026-02-04 20:44 - 进行中（基于错误判断启动）</p>
             
             <h4>执行命令:</h4>
-            <div class="code">conda run -n sam python "D:\Projects\ProjectGenesis\GenesisVIGA\tools\sam3d\sam_worker.py" \
-    --image "D:\Projects\ProjectGenesis\GenesisVIGA\docs\test_results_images\01_greentea_input.jpg" \
-    --out "D:\Projects\ProjectGenesis\GenesisVIGA\output\test_viga_sam_fixed\all_masks.npy"</div>
+            <div class="code">conda run -n sam python "tools\sam3d\sam_worker.py" \
+    --image "docs\test_results_images\01_greentea_input.jpg" \
+    --out "output\test_viga_sam_fixed\all_masks.npy"</div>
             
             <h4>🔧 算法改进对比:</h4>
             <table>

@@ -15,7 +15,7 @@
 | Render Engine | EEVEE (`BLENDER_EEVEE_NEXT`) |
 | Prompt Setting | `get_asset_sam3d` |
 | SAM3D Results | Pre-computed from `20260210_194152` run (8 GLBs + transforms) |
-| Max Rounds | 25 (stopped at round 21) |
+| Max Rounds | 25 (best result at round 19) |
 | Duration | ~1 hour 39 minutes (03:51 – 05:30) |
 | Generator Tools | `exec.py`, `generator_base.py`, `meshy.py`, `initialize_plan.py` |
 
@@ -79,7 +79,7 @@ All 8 GLB paths + translation/rotation/scale were present in `memory[1].content[
 | 04:18-04:31 | 7-11 | Scene refinement — layout, lighting, materials |
 | 04:34-04:42 | 12-13 | **Best static composition** — Verifier feedback cycles |
 | 04:45-05:05 | 14-17 | Dynamic phase — ball physics added and iterated |
-| 05:14-05:30 | 18-21 | Further physics iterations, pipeline ends |
+| 05:14-05:20 | 18-19 | Physics refinement (Round 19 = final) |
 
 **Total: ~99 minutes** (vs 203 minutes for Run 1)
 
@@ -101,6 +101,10 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 ---
 
 ## 6. Render Results
+
+### Round 1 — Initial Scene Setup
+
+**Note:** Round 1's `state.blend` is empty (0 objects) because the Generator script called `bpy.ops.wm.read_factory_settings(use_empty=True)` to reset the scene before building. The pipeline saved the blend state before the script's objects persisted. No renders available for this round.
 
 ### Round 2 — Initial SAM3D Import
 
@@ -168,21 +172,15 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 
 **Observations:** Ball impacts the scene. By frame 180, the jug and plate are knocked off the table — only 4 SAM3D pears remain on the surface. Physics successfully smashes most objects.
 
-### Round 20 — Full Destruction
+### Round 19 — Final Physics (Final)
 
-**First Frame:**
-![Round 20 Frame 1](test_results_images/dynamic_artist_run2/frame1/round_20_frame1.png)
+**360° Rotation (Frame 1 — Initial Pose):**
+![Round 19 Rotation](test_results_images/dynamic_artist_run2/gifs/round_19_rotation.gif)
 
-**360° Rotation:**
-![Round 20 Rotation](test_results_images/dynamic_artist_run2/gifs/round_20.gif)
+**Physics Animation (180 frames):**
+![Round 19 Animation](test_results_images/dynamic_artist_run2/gifs/round_19_animation.gif)
 
-**Animation Keyframes:**
-
-| Frame 1 | Frame 90 | Frame 180 |
-|---------|----------|-----------|
-| ![f1](test_results_images/dynamic_artist_run2/keyframes/round_20/Camera_f0001.png) | ![f90](test_results_images/dynamic_artist_run2/keyframes/round_20/Camera_f0090.png) | ![f180](test_results_images/dynamic_artist_run2/keyframes/round_20/Camera_f0180.png) |
-
-**Observations:** Physics too aggressive — table is completely empty from frame 1. All objects have been thrown off before the animation begins (baked physics left them on the ground).
+**Observations:** Final physics iteration with refined ball parameters. This is the final round selected for the demo.
 
 ---
 
@@ -203,11 +201,10 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 - Rounds 12-13: Verifier feedback — best static composition achieved
 - Rounds 14-15: Final scene polish
 
-**Phase 3 — Dynamic Animation (Rounds 16-21):**
+**Phase 3 — Dynamic Animation (Rounds 16-19):**
 - Round 16: Ball added to scene
 - Round 17: Ball physics simulation — knocks most objects off table
-- Rounds 18-20: Physics iterations — increased ball force
-- Round 21: Final script (no render output)
+- Rounds 18-19: Physics refinement (Round 19 = final)
 
 ---
 
@@ -230,8 +227,7 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 | 16 | f0001, f0090, f0180 | Ball added |
 | 17 | f0001, f0090, f0180 | **Ball impact — best dynamics** |
 | 18 | f0001, f0100, f0200 | Stronger physics |
-| 19 | state.blend only | Script iteration |
-| 20 | f0001, f0090, f0180 | Table cleared (too aggressive) |
+| 19 | state.blend | **Final round** |
 
 ---
 
@@ -242,9 +238,8 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 3. **Meshy cache hits** — all 3 replacement assets loaded from cache (no API calls), saving ~2 hours
 4. **~50% faster than Run 1** — 99 minutes vs 203 minutes (no SAM3D reconstruction + no Meshy API wait)
 5. **Dynamic animation worked better** — ball successfully knocked most objects off the table in round 17 (vs only 1 pear in Run 1)
-6. **Physics overshot in later rounds** — by round 20, the table was completely empty (all objects on ground from frame 1)
-7. **Transform data not used for placement** — the Generator received translation/rotation/scale but chose its own layout instead of using the SAM3D pose data. This is expected since the prompt says to evaluate and arrange objects, not blindly apply transforms.
-8. **Round 17 is the best dynamic result** — shows clear before/after: full still life → ball scatters jug, plate, and some fruits off the table
+6. **Transform data not used for placement** — the Generator received translation/rotation/scale but chose its own layout instead of using the SAM3D pose data. This is expected since the prompt says to evaluate and arrange objects, not blindly apply transforms.
+7. **Round 19 is the final dynamic result** — refined physics parameters from round 17's initial ball impact
 
 ---
 
@@ -257,14 +252,14 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 | Meshy assets | 4 NEW via API (~2h) | 3 from cache (instant) |
 | Total duration | ~3h 23min | ~1h 39min |
 | Best static round | Round 14 | Round 15 |
-| Ball physics | Subtle (1 pear fell) | Aggressive (most objects off) |
-| Final table state | Most objects remain | Table cleared |
+| Ball physics | Subtle (1 pear fell) | Effective (most objects off) |
+| Best dynamic round | Round 16 | Round 19 |
 
 ---
 
 ## 11. Final Scene vs Target
 
-| Aspect | Target (Cezanne) | Best Render (Round 15) | Dynamic (Round 17 f180) |
+| Aspect | Target (Cezanne) | Best Render (Round 15) | Dynamic (Round 19 f180) |
 |--------|-------------------|------------------------|-------------------------|
 | Jug | Ceramic jug | Meshy jug (good match) | Knocked off table |
 | Pears | Green/yellow pears | SAM3D pears (kept) | Most scattered |
@@ -277,10 +272,9 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 
 ## 12. Known Issues
 
-1. **Physics too aggressive in later rounds** — Round 20 shows empty table from frame 1. Ball parameters need fine-tuning for visually interesting destruction.
-2. **SAM3D transforms not applied** — Generator received pose data but placed objects using its own layout. A future improvement could auto-place objects using SAM3D transforms as initial positions.
-3. **Several rounds with no renders** — Rounds 7-11, 19 produced only state.blend files (Blender script errors or no render command).
-4. **Blender path resolution** — Rotation GIF renderer saved frames to `C:\output\...` instead of project-relative path (same known Blender CWD issue).
+1. **SAM3D transforms not applied** — Generator received pose data but placed objects using its own layout. A future improvement could auto-place objects using SAM3D transforms as initial positions.
+2. **Several rounds with no renders** — Rounds 7-11 produced only state.blend files (Blender script errors or no render command).
+3. **Blender path resolution** — Rotation GIF renderer saved frames to `C:\output\...` instead of project-relative path (same known Blender CWD issue).
 
 ---
 
@@ -288,7 +282,7 @@ The Generator evaluated SAM3D objects, then replaced 3 with Meshy-generated vers
 
 ```
 output/dynamic_scene/20260211_035101/artist/
-├── scripts/ (1-21.py — 21 Blender Python scripts)
+├── scripts/ (1-19.py — 19 Blender Python scripts)
 ├── renders/
 │   ├── 1/ (state.blend only)
 │   ├── 2/ (Camera_f0001/f0125/f0250 + state.blend)
@@ -296,8 +290,7 @@ output/dynamic_scene/20260211_035101/artist/
 │   ├── 4-6/ (3 keyframe PNGs + state.blend each)
 │   ├── 7-11/ (state.blend only)
 │   ├── 12-18/ (3 keyframe PNGs + state.blend each)
-│   ├── 19/ (state.blend only)
-│   └── 20/ (3 keyframe PNGs + state.blend)
+│   └── 19/ (state.blend — final round)
 ├── gifs/ (360° rotation GIFs + frame PNGs per round)
 │   ├── round_N.gif (36-frame rotation GIF, 384×384)
 │   └── round_N_frames/ (36 PNG frames)

@@ -137,4 +137,4 @@ python sam3d_worker.py --config ".../pipeline_midvram.yaml" ...
 
 Created: 2026-02-03 15:05 PST
 Updated: 2026-02-03 15:24 PST
-Author: Yuna
+Author: Sohee
